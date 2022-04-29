@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiora</title>
+    
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- BODY -->
+<body>
+    <!-- STYLE -->
+    <style>
+        .vote-item {
+            background-color: white;
+            padding: 0.25em 0.75em;
+            max-width: 75%;
+            border-radius: 5px;
+            box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
+
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+    <div id="navbar"><a class="brand" href="index.html"><b>Kiora</b></a>&nbsp;| When are we meeting?</div>
+    <div id="banner-img"></div>
+    <div id="fullpage-container" class="has-nav has-banner">
+        <div id="content-container">
+            <h1 id="event-name" class="margin-bottom-m">[Event Name]</h1>
+            
+            <div class="group">
+                <h2>Voters</h2>
+                <ul id="voter-list" style="margin: 0">
+                </ul>
+            </div>
+
+            <div id="top-dates-div" class=group>
+                <h2>Top dates</h2>
+                <!-- <div class="vote-item"> <div>Apr 7th (Sat), 2022</div> <div>1 vote</div> </div> -->
+            </div>
+
+            <button type="button" onclick="location.href='date-voting.html'">Back to voting</button>
+        </div>
+    </div>
+
+    <!-- Calendar Library ~ just for some utility functions -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Local script -->
+    <script src="../js/date-results.js"></script>
+</body>
+
+</html>

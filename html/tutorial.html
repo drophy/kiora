@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiora</title>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- BODY -->
+
+<body>
+    <!-- STYLE -->
+    <style>
+        iframe {
+            max-width: 100%;
+        }
+    </style>
+
+    <div id="fullpage-container">
+        <div id="content-container">
+            <h1 class="margin-bottom-s">First time using Kiora?</h1>
+            <p class="margin-bottom-m">Watch this 5 minute tutorial to get started!</p>
+            
+            <iframe class="margin-bottom-m" width="560" height="315" src="https://www.youtube-nocookie.com/embed/QH2-TGUlwu4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <div class="margin-bottom-s">
+                <input type="checkbox" id="skip-tutorial" checked>
+                <label for="skip-tutorial">Skip tutorial next time</label>
+            </div>
+            <button type="button" onclick="location.href='date-picker.html'">Continue</button>
+
+        </div>
+    </div>
+</body>
+
+</html>

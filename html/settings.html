@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiora</title>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- BODY -->
+
+<body>
+    <div id="fullpage-container">
+        <div id="content-container">
+            <h1>Almost done!</h1>
+            
+            <div class="group">
+                <label for="name">Meeting name (optional)</label>
+                <input id="name" type="text" autocomplete="off">
+            </div>
+
+            <div class="group">
+                <label for="description">Description (optional)</label>
+                <textarea id="description" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="group">
+                <p>Theme</p>
+                <div class="group-horizontal">
+                    <div>
+                        <input type="radio" name="theme" id="light-theme" checked>
+                        <label for="light-theme">Light</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="theme" id="dark-theme">
+                        <label for="dark-theme">Dark</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO: Add accent color option -->
+            <!-- <div class="group">
+                <p>Accent color</p>
+                <div class="group-horizontal">
+                    <div>
+                        <input type="radio" name="theme" id="light-theme" checked>
+                        <label for="light-theme">Light</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="theme" id="dark-theme">
+                        <label for="dark-theme">Dark</label>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="group">
+                <label for="font">Font</label>
+                <select id="font">
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="Quicksand">Quicksand</option>
+                    <option value="Raleway">Raleway</option>
+                    <option value="Poppins">Poppins</option>
+                </select>
+            </div>
+
+            <div class="group">
+                <label for="picture-url">Picture URL (optional)</label>
+                <input id="picture-url" type="text">
+            </div>
+
+            <div class="group">
+                <p>All attendants are required</p>
+                <div class="group-horizontal">
+                    <div>
+                        <input type="radio" name="attendants-required" id="attendants-required-true" checked>
+                        <label for="attendants-required-true">True</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="attendants-required" id="attendants-required-false">
+                        <label for="attendants-required-false">False</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" onclick="location.href='date-picker.html'">Back</button>
+            <button type="button" onclick="createPoll();">Create poll</button>
+        </div>
+    </div>
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.9/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Local Script -->
+    <script src="../js/settings.js"></script>
+</body>
+
+</html>

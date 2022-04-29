@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiora</title>
+
+    <!-- Calendar Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
+    
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- BODY -->
+<body>
+    <div id="navbar"><a class="brand" href="index.html"><b>Kiora</b></a>&nbsp;| When are we meeting?</div>
+    <div id="banner-img"></div>
+    <div id="fullpage-container" class="has-nav has-banner">
+        <div id="content-container">
+            <h1 id="event-name">[Event Name]</h1>
+            <p id="event-description">[Description]</p>
+            <div id="calendar-container" class="margin-bottom-m">
+                <input id="calendar" class="display-none">
+            </div>
+            <div class="group">
+                <label for="display-name">Display name as</label>
+                <input id="display-name" type="text">
+            </div>
+            <button type="button" onclick="submitVote();">Submit vote</button>
+            <p>Or click <a href="date-results.html">here</a> to see results without voting</p>
+        </div>
+    </div>
+
+    <!-- Calendar Library -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.9/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Local script -->
+    <script src="../js/date-voting.js"></script>
+</body>
+
+</html>

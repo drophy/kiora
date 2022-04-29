@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat:wght@400;700&display=swap');
+/* 
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Montserrat', sans-serif; 
+*/
+
+/*
+BREAKPOINTS
+https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/  
+$phone-upper-boundary: 600px;
+$tablet-portrait-upper-boundary: 900px;
+$tablet-landscape-upper-boundary: 1200px;
+$desktop-upper-boundary: 1800px;
+*/
+
+:root
+{
+    --s-spacing: 1.5vh;
+    --m-spacing: 4vh;
+
+    --m-h-spacing: 2vw;
+
+    --nav-height: 10vh;
+    --banner-height: 15vh;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: 'Montserrat', sans-serif; 
+}
+
+/***** UTILITY *****/
+.display-none
+{
+    display: none;
+}
+
+#fullpage-container
+{
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 100%; /* https://stackoverflow.com/questions/30489594/prevent-100vw-from-creating-horizontal-scroll, answer by Animesht Tiwari */
+    min-height: 100vh;
+
+    padding: 8vh 0;
+
+    background-color: blanchedalmond;
+    /* background-color: rgb(251, 104, 119); */
+
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+#fullpage-container.has-nav
+{
+    min-height: calc(100vh - var(--nav-height));
+    padding: 2vh 0;
+    display: flex;
+    flex-direction: column;
+}
+#fullpage-container.has-banner
+{
+    min-height: calc(100vh - var(--banner-height));
+}
+#fullpage-container.has-nav.has-banner
+{
+    min-height: calc(100vh - var(--nav-height) - var(--banner-height));
+}
+
+#content-container
+{
+    width: 60vw;
+}
+
+@media (max-width: 600px) 
+{
+    #content-container
+    {
+        width: 90vw;
+    }
+}
+
+.group
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--m-spacing);
+}
+.group>*:not(:last-child)
+{
+    margin: 0;
+    margin-bottom: var(--s-spacing);
+}
+
+.group-horizontal
+{
+    display: flex;
+}
+.group-horizontal>*:not(:last-child)
+{
+    margin: 0;
+    margin-right: var(--m-h-spacing);
+}
+
+.margin-bottom-s
+{
+    margin-bottom: var(--s-spacing);
+}
+.margin-bottom-m
+{
+    margin-bottom: var(--m-spacing);
+}
+
+/***** COMPONENTS *****/
+
+/* https://moderncss.dev/css-button-styling-guide/ */
+button
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+
+    text-align: center;
+    line-height: 1.1;
+
+    cursor: pointer;
+    /* TODO: create hover, focus, etc. states following guide */
+}
+
+/* Navbar */
+#navbar
+{
+    width: 100%;
+    height: 10vh;
+
+    background-color: black;
+ 
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#navbar .brand 
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* Banner */
+#banner-img {
+    width: 100%;
+    height: 15vh;
+
+    background-color: gray;
+    background-size: cover;
+    background-position: center;
+}

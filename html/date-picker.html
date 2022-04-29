@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kiora</title>
+
+    <!-- Calendar Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
+    
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<!-- BODY -->
+<body>
+    <div id="fullpage-container">
+        <div id="content-container">
+            <h1>Pick all possible dates</h1>
+            <p><b>Tip:</b> to select all days between 2 dates, click on the first day, hold shift and click on the last date.</p>
+            <div id="calendar-container" class="margin-bottom-m">
+                <input id="calendar" class="display-none">
+            </div>
+            <button type="button" onclick="next();">Next</button>
+        </div>
+    </div>
+
+    <!-- Calendar Library -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.9/dist/sweetalert2.all.min.js"></script>
+
+    <script src="../js/date-picker.js"></script>
+</body>
+
+</html>

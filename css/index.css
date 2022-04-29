@@ -1,0 +1,51 @@
+body
+{
+    margin: 0;
+
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: black;
+
+    /* Content Within */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+body::after
+{
+    content: ' ';
+    display: block;
+    z-index: -1; /* so it's not on top of text */
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../assets/img/damnmyname\ ship\ flat\ landscape.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 80%; /* so we can see 20% of the black background color */
+}
+
+h1
+{
+    font-size: 6rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+h2
+{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.75em;
+    font-weight: 400;
+}
